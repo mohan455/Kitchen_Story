@@ -1,0 +1,62 @@
+
+<header>
+    <div class="navbar navbar-dark bg-warning shadow-sm">
+        <div class="navbar-brand align-items-center d-flex">
+            &nbsp;&nbsp;&nbsp; <i style="font-size: 40px;" class="fas fa-hamburger">&nbsp;</i>
+            <strong style="font-size: 30px;">KitchenStory</strong>
+
+          <!-- <div class="form-group">
+              <input class="form-control" type="text" placeholder="Search food items">
+          </div> -->
+        </div>
+        <div class="text-end">
+
+            <div *ngIf="checkLoginStatus()">
+                <!-- <button [routerLink]='edit-profile' class="btn btn-danger">Edit Profile</button> -->
+
+                <button (click)="refresh()" [routerLink]="['/edit-profile', uid]" class="btn btn-primary me-2">Edit Profile</button>
+
+
+
+              <button (click)='logout()' class="btn btn-danger">Logout</button>
+              <div routerLink='cart' class="btn btn-warning">
+                <i style="font-size: 30px; color: aliceblue;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItems}}</div> 
+            </div>
+            </div>
+            <div *ngIf="!checkLoginStatus()">
+                <button routerLink='login' class="btn btn-success me-2">Login</button>
+                <button routerLink='register' class="btn btn-success me-2">Register</button>
+                <div routerLink='cart' class="btn btn-warning">
+                    <i style="font-size: 30px; color: aliceblue;" class="fas fa-cart-plus"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">{{totalItems}}</div> 
+                </div>
+            </div>
+
+
+            
+            
+
+        </div>
+        <!-- <div routerLink='cart' class="btn btn-warning">
+            <i style="font-size: 30px; color: aliceblue;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItems}}</div> 
+        </div> -->
+
+    </div>
+</header>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+

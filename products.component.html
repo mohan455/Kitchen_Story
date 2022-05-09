@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="mt-4">
+    <strong>Search : </strong> <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search for foods" />
+    <span class="fas fa-search search-icon"></span>
+
+</div>
+</div>
+<br/>
+<section >
+    <div class="container" >
+        <div class="row text-center g-4">
+            <div *ngFor="let food of productList | filter:searchText" class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src={{food.img}} class="card-img-top" alt="Food" width="18rem" height="250px">
+                    <div class="card-body">
+                      <h5 class="card-title">{{food.name}}</h5>
+                      <p class="card-text">{{food.description}}</p>
+                      <button (click)="addtocart(food)" class="btn btn-primary">Add To Cart</button>
+                    </div>
+                  </div>
+            </div>
+         </div>
+    </div>
+</section>
+

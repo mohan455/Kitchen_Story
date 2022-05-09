@@ -1,0 +1,28 @@
+<div class="container">
+    <form>
+        <label for="name" class="mb-1 mt-3">Name</label>
+        <div>
+            <input type="text" class="form-control" name="name" [(ngModel)]="user.name"  />
+        </div>
+        <label for="name" class="mb-1 mt-3">Username</label>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" name="username" [(ngModel)]="user.username"  />
+        </div>
+        <label for="name" class="mb-1 mt-3">Enter new Password</label>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" name="password" [(ngModel)]="user.password"  />
+        </div>
+
+        <label for="name" class="mb-1 mt-3">Confirm Password</label>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" name="confirmpassword" [(ngModel)]="confirmPass"  />
+        </div>
+        <a routerLink='/products' class="btn btn-outline-secondary">Go back</a> |
+        <button class="btn btn-outline-success" (click)="updateUser()">Update</button>
+    </form>
+    </div>
+    
+    
